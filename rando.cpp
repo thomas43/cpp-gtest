@@ -1,4 +1,5 @@
 #include "rando.h"
+#include <cmath>
 //#include <stdlib.h>
 
 
@@ -42,7 +43,7 @@ int Rando::nearestToZero(int a, int b)
   {
     return 0;
   }
-  if(a < b)
+  if(std::abs(a) < std::abs(b))
   {
     return a;
   }
