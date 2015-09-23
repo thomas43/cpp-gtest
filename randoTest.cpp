@@ -1,4 +1,4 @@
-/**
+/*
  * Unit Tests for Rando Test
 **/
 
@@ -10,7 +10,7 @@
 
 	bool shouldWorry(bool,bool,bool);
 	bool isDivisbleBy(int,int);
-	bool isPrime(int);
+	  bool isPrime(int);
 	int nearestToZero(int,int);
 */
  
@@ -27,4 +27,13 @@ TEST(RandoTest, allChildrenSmile)
 {
 	Rando rando;
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
+}
+TEST(RandoTest, nearestToZero)
+{
+  Rando rando;
+  ASSERT_EQ(0, rando.nearestToZero(0,0));
+  ASSERT_EQ(0, rando.nearestToZero(1,0));
+  ASSERT_EQ(0, rando.nearestToZero(0,1));
+  ASSERT_EQ(1, rando.nearestToZero(2,1));
+  ASSERT_EQ(1, rando.nearestToZero(1,2));
 }

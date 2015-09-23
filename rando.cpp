@@ -29,7 +29,8 @@ bool Rando::isDivisbleBy(int first, int second)
 **/
 bool Rando::isPrime(int num)
 {
-	return true;
+	
+  return true;
 }
 
 /**
@@ -37,6 +38,16 @@ bool Rando::isPrime(int num)
  * that is closest to zero without actually being zero.
 **/
 int Rando::nearestToZero(int a, int b)
-{
-	return 0;
+{	if(a==0 && b==0)
+  {
+    return 0;
+  }
+  if(a < b)
+  {
+    return a;
+  }
+  else
+  {
+    return b;
+  }
 }
